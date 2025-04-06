@@ -95,7 +95,7 @@ class Point:
     def __init__(self, coords, mass=1.0, q=1.0 ,speed = None, **properties):
         self.coords=coords
         if speed is None:
-            self.speed = Vector(*[0 for i in range(len(coords))])#не ввелf скорость-она 0
+            self.speed = Vector(*[0 for i in range(len(coords))])#не ввела скорость-она 0
         else:
             self.speed = speed
         self.acc = Vector(*[0 for i in range(len(coords))])#начальное ускорение = 0
