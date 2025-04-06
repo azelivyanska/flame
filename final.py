@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 import random
 from matplotlib.animation import FuncAnimation, ArtistAnimation
 
-#жесткое описание вектора и его своиств(сложение там, умножение)
 class Vector(list):
     def __init__(self, *el):
         for e in el:
@@ -90,12 +89,13 @@ class Vector(list):
     def randvec(dim,r1,r2):
         m=[r1,r2]
         return Vector(*[random.random()*m[i] for i in range(2)])
+        
 #жесткое описание точки и его свойств
 class Point:
     def __init__(self, coords, mass=1.0, q=1.0 ,speed = None, **properties):
         self.coords=coords
         if speed is None:
-            self.speed = Vector(*[0 for i in range(len(coords))])#не ввел скорость-она 0
+            self.speed = Vector(*[0 for i in range(len(coords))])#не ввелf скорость-она 0
         else:
             self.speed = speed
         self.acc = Vector(*[0 for i in range(len(coords))])#начальное ускорение = 0
